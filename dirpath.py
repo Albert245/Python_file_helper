@@ -12,12 +12,12 @@ def listDir(dir,keyname):
         if(keyname in fileName):
             file_path = format(os.path.join(dir, fileName))
             file_name = fileName
-    return file_name
+    return file_path,file_name
 
 
 with open('test1.txt','w') as f:
-    support_file = listDir(cwd,'Support')
+    support_file,sp = listDir(cwd,'Support')
     f.write(support_file+'\n')
-    f.write(cwd)
+    f.write('current_Dir:'+cwd)
     end_time = time.time()
     f.write('\nExecution time: '+str(end_time-start_time)+' s')

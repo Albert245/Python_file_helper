@@ -22,7 +22,7 @@ def Find_file_Name(dir,keyname):
     fileNames = os.listdir(dir)
     for fileName in fileNames:
         if(keyname in fileName):
-            file_path = os.path.abspath(os.path.join(dir, fileName))
+            # file_path = os.path.abspath(os.path.join(dir, fileName))
             file_name = fileName
 
     return file_name
@@ -45,12 +45,15 @@ def Find_col(keyname,row_max,col_max_num):
                 print(col_return,row_return)
     return col_return,row_return
 
+#Access Excel Workbook
 
 Ramcell_dir = Find_file_Name(cwd,'Ramcell')
 print('Accessing '+str(Ramcell_dir))
 wbl = load_workbook(Ramcell_dir)
 wsl = wbl.active
 print('accessing: '+ str(wsl))
+
+
 
 for row_count in range(1,1000):                                 # Count max rows and max cols 
     for j in range(1,1000):
