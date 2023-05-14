@@ -1,0 +1,3 @@
+ISZ_EV-VCU_SupportInfo_v05_Rev9.xlsm
+C:\Users\PNM3HC\Desktop\tool\Nhat_bitloss_tool
+Execution time: 0.0019989013671875 s
