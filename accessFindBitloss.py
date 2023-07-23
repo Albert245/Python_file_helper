@@ -2,7 +2,7 @@
 09/08/2022
 Pham Minh Nhat
 PNM3HC
-Find Factor & Norm, chech bitloss
+Find Factor & Norm, check bitloss
 '''
 
 
@@ -14,6 +14,9 @@ from openpyxl.styles import Font
 import os
 import numpy as np
 
+
+D_ID = 'DID'
+ramcell = 'measurement'
 
 '''
     You should use wb[sheetname]
@@ -71,8 +74,11 @@ def Find_col(keyname,row_max,col_max_num):
 Ramcell_dir = Find_file_Name(cwd,'Ramcell')
 print('Accessing '+str(Ramcell_dir))
 wbl = load_workbook(Ramcell_dir)
-find_ws('analyze')
-wsl = wbl.active
+ws_name = find_ws('Sheet')
+if ws_name != '':
+    wsl = wbl[ws_name]
+else:
+    wsl = wbl.active
 print('accessing: '+ str(wsl))
 
 

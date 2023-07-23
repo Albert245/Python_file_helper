@@ -1,4 +1,0 @@
-sp_file:C:\Users\nhtc1\Desktop\Nhat_bitloss_tool\ISZ_EV-VCU_SupportInfo_v05_Rev9.xlsm
-sp_path:ISZ_EV-VCU_SupportInfo_v05_Rev9.xlsm
-current_Dir:C:\Users\nhtc1\Desktop\Nhat_bitloss_tool
-Execution time: 0.0 s
