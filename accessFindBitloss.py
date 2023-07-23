@@ -15,8 +15,28 @@ import os
 import numpy as np
 
 
+'''
+    You should use wb[sheetname]
+
+    from openpyxl import load_workbook
+    wb2 = load_workbook('test.xlsx')
+    ws4 = wb2["New Title"]
+    PS: You should check if your sheet in sheet names wb.sheetnames
+
+    print(wb2.sheetnames)
+    ['Sheet2', 'New Title', 'Sheet1']
+'''
 start_time = time.time()
 cwd = os.getcwd()
+
+def find_ws(keyname):
+    sheet_name = ''
+    for i in wbl.sheetnames :
+        print(i)
+        if(keyname in i):
+            sheet_name = i
+    return sheet_name
+
 
 def Find_file_Name(dir,keyname):
     fileNames = os.listdir(dir)
@@ -36,13 +56,14 @@ def Find_col(keyname,row_max,col_max_num):
     for row in range(1,row_max+1):
         for col in range(1,col_max_num+1):
             col_char = get_column_letter(col)
-            print(col_char)
-            print(str(wsl[col_char +str(row)].value))
-            print(wsl[col_char +str(row)].value)
+            # print(col_char)
+            # print(str(wsl[col_char +str(row)].value))
+            # print(wsl[col_char +str(row)].value)
             if keyname in str(wsl[col_char +str(row)].value):
                 col_return = col
                 row_return = row
-                print(col_return,row_return)
+                # print(col_return,row_return)
+    print('[' + str(get_column_letter(col_return))+str(row_return) + '] : '+wsl[get_column_letter(col_return)+str(row_return)].value)
     return col_return,row_return
 
 #Access Excel Workbook
@@ -50,6 +71,7 @@ def Find_col(keyname,row_max,col_max_num):
 Ramcell_dir = Find_file_Name(cwd,'Ramcell')
 print('Accessing '+str(Ramcell_dir))
 wbl = load_workbook(Ramcell_dir)
+find_ws('analyze')
 wsl = wbl.active
 print('accessing: '+ str(wsl))
 
@@ -70,8 +92,6 @@ print(DID_col)
 print(DID_row_1st)
 
 
-
-        
-
+print('\n')
 end_time = time.time()
 print(str(end_time-start_time)+' s')
