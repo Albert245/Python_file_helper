@@ -18,7 +18,7 @@ def read_file(file_name):
     data  = open(file_name,'r').read()
     return data
 
-def find_paragraph(data, keyname, type_parg):
+# def find_paragraph(data, keyname, type_parg):
     
 
 with open('test.txt','w') as f:

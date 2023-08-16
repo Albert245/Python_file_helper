@@ -71,15 +71,17 @@ def Find_col(keyname,row_max,col_max_num):
 
 #Access Excel Workbook
 
-Ramcell_dir = Find_file_Name(cwd,'Ramcell')
-print('Accessing '+str(Ramcell_dir))
-wbl = load_workbook(Ramcell_dir)
-ws_name = find_ws('Sheet')
+File_dir = Find_file_Name(cwd,'nhap3')
+print('Accessing '+str(File_dir))
+wbl = load_workbook(File_dir)
+ws_name = find_ws('Cal')
 if ws_name != '':
     wsl = wbl[ws_name]
 else:
     wsl = wbl.active
 print('accessing: '+ str(wsl))
+print(wsl['E'][104].value)
+print(wsl["G"][-1])
 
 
 
