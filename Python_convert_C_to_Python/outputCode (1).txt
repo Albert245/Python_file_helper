@@ -1,0 +1,400 @@
+import re
+
+def convert_pseudo_code_to_python(pseudo_code):
+    # Remove leading and trailing whitespaces
+    pseudo_code = pseudo_code.strip()
+    
+    # Replace '->' with '.' for object method calls
+    pseudo_code = pseudo_code.replace('->', '.')
+    
+    # Replace 'is' with '==' for equality comparison
+    pseudo_code = pseudo_code.replace(' is ', ' == ')
+    
+    # Replace 'and' with 'and' for logical 'and' operator
+    pseudo_code = pseudo_code.replace(' and ', ' and ')
+    
+    # Replace 'or' with 'or' for logical 'or' operator
+    pseudo_code = pseudo_code.replace(' or ', ' or ')
+    
+    # Replace 'not' with 'not' for logical 'not' operator
+    pseudo_code = pseudo_code.replace(' not ', ' not ')
+    
+    # Replace 'true' with 'True' for boolean value
+    pseudo_code = pseudo_code.replace('true', 'True')
+    
+    # Replace 'false' with 'False' for boolean value
+    pseudo_code = pseudo_code.replace('false', 'False')
+    
+    # Replace 'null' with 'None' for null value
+    pseudo_code = pseudo_code.replace('null', 'None')
+    
+    # Replace 'print' with 'print' for printing output
+    pseudo_code = pseudo_code.replace('print', 'print')
+    
+    # Replace 'if' with 'if' for conditional statements
+    pseudo_code = pseudo_code.replace('if', 'if')
+    
+    # Replace 'else' with 'else' for else statements
+    pseudo_code = pseudo_code.replace('else', 'else')
+    
+    # Replace 'elif' with 'elif' for else if statements
+    pseudo_code = pseudo_code.replace('elif', 'elif')
+    
+    # Replace 'while' with 'while' for while loops
+    pseudo_code = pseudo_code.replace('while', 'while')
+    
+    # Replace 'for' with 'for' for for loops
+    pseudo_code = pseudo_code.replace('for', 'for')
+    
+    # Replace 'in' with 'in' for iterating over a collection
+    pseudo_code = pseudo_code.replace(' in ', ' in ')
+    
+    # Replace 'range' with 'range' for generating a sequence of numbers
+    pseudo_code = pseudo_code.replace('range', 'range')
+    
+    # Replace 'def' with 'def' for defining a function
+    pseudo_code = pseudo_code.replace('def', 'def')
+    
+    # Replace 'return' with 'return' for returning a value from a function
+    pseudo_code = pseudo_code.replace('return', 'return')
+    
+    # Replace 'import' with 'import' for importing libraries
+    pseudo_code = pseudo_code.replace('import', 'import')
+    
+    # Replace 'class' with 'class' for defining a class
+    pseudo_code = pseudo_code.replace('class', 'class')
+    
+    # Replace 'self' with 'self' for referring to the current instance of a class
+    pseudo_code = pseudo_code.replace('self', 'self')
+    
+    # Replace 'new' with '' for creating a new object (not needed in Python)
+    pseudo_code = pseudo_code.replace('new', '')
+    
+    # Replace 'var' with '' for declaring a variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('var', '')
+    
+    # Replace 'int' with '' for declaring an integer variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('int', '')
+    
+    # Replace 'float' with '' for declaring a float variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('float', '')
+    
+    # Replace 'string' with '' for declaring a string variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('string', '')
+    
+    # Replace 'boolean' with '' for declaring a boolean variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('boolean', '')
+    
+    # Replace 'array' with '' for declaring an array variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('array', '')
+    
+    # Replace 'dictionary' with '' for declaring a dictionary variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('dictionary', '')
+    
+    # Replace 'list' with '' for declaring a list variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('list', '')
+    
+    # Replace 'set' with '' for declaring a set variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('set', '')
+    
+    # Replace 'tuple' with '' for declaring a tuple variable (not needed in Python)
+    pseudo_code = pseudo_code.replace('tuple', '')
+    
+    # Replace 'function' with '' for declaring a function (not needed in Python)
+    pseudo_code = pseudo_code.replace('function', '')
+    
+    # Replace 'method' with '' for declaring a method (not needed in Python)
+    pseudo_code = pseudo_code.replace('method', '')
+    
+    # Replace 'constructor' with '' for declaring a constructor (not needed in Python)
+    pseudo_code = pseudo_code.replace('constructor', '')
+    
+    # Replace 'destructor' with '' for declaring a destructor (not needed in Python)
+    pseudo_code = pseudo_code.replace('destructor', '')
+    
+    # Replace 'private' with '' for declaring a private member (not needed in Python)
+    pseudo_code = pseudo_code.replace('private', '')
+    
+    # Replace 'public' with '' for declaring a public member (not needed in Python)
+    pseudo_code = pseudo_code.replace('public', '')
+    
+    # Replace 'protected' with '' for declaring a protected member (not needed in Python)
+    pseudo_code = pseudo_code.replace('protected', '')
+    
+    # Replace 'static' with '' for declaring a static member (not needed in Python)
+    pseudo_code = pseudo_code.replace('static', '')
+    
+    # Replace 'final' with '' for declaring a final member (not needed in Python)
+    pseudo_code = pseudo_code.replace('final', '')
+    
+    # Replace 'abstract' with '' for declaring an abstract member (not needed in Python)
+    pseudo_code = pseudo_code.replace('abstract', '')
+    
+    # Replace 'interface' with '' for declaring an interface (not needed in Python)
+    pseudo_code = pseudo_code.replace('interface', '')
+    
+    # Replace 'extends' with '' for extending a class (not needed in Python)
+    pseudo_code = pseudo_code.replace('extends', '')
+    
+    # Replace 'implements' with '' for implementing an interface (not needed in Python)
+    pseudo_code = pseudo_code.replace('implements', '')
+    
+    # Replace 'super' with 'super()' for calling the parent class constructor
+    pseudo_code = pseudo_code.replace('super', 'super()')
+    
+    # Replace 'break' with 'break' for breaking out of a loop
+    pseudo_code = pseudo_code.replace('break', 'break')
+    
+    # Replace 'continue' with 'continue' for continuing to the next iteration of a loop
+    pseudo_code = pseudo_code.replace('continue', 'continue')
+    
+    # Replace 'try' with 'try' for exception handling
+    pseudo_code = pseudo_code.replace('try', 'try')
+    
+    # Replace 'except' with 'except' for catching exceptions
+    pseudo_code = pseudo_code.replace('except', 'except')
+    
+    # Replace 'finally' with 'finally' for code that will always execute
+    pseudo_code = pseudo_code.replace('finally', 'finally')
+    
+    # Replace 'raise' with 'raise' for raising an exception
+    pseudo_code = pseudo_code.replace('raise', 'raise')
+    
+    # Replace 'assert' with 'assert' for debugging assertions
+    pseudo_code = pseudo_code.replace('assert', 'assert')
+    
+    # Replace 'input' with 'input' for reading user input
+    pseudo_code = pseudo_code.replace('input', 'input')
+    
+    # Replace 'open' with 'open' for opening a file
+    pseudo_code = pseudo_code.replace('open', 'open')
+    
+    # Replace 'read' with 'read' for reading from a file
+    pseudo_code = pseudo_code.replace('read', 'read')
+    
+    # Replace 'write' with 'write' for writing to a file
+    pseudo_code = pseudo_code.replace('write', 'write')
+    
+    # Replace 'close' with 'close' for closing a file
+    pseudo_code = pseudo_code.replace('close', 'close')
+    
+    # Replace 'del' with 'del' for deleting a variable
+    pseudo_code = pseudo_code.replace('del', 'del')
+    
+    # Replace 'len' with 'len' for getting the length of a collection
+    pseudo_code = pseudo_code.replace('len', 'len')
+    
+    # Replace 'append' with 'append' for adding an element to a list
+    pseudo_code = pseudo_code.replace('append', 'append')
+    
+    # Replace 'remove' with 'remove' for removing an element from a list
+    pseudo_code = pseudo_code.replace('remove', 'remove')
+    
+    # Replace 'pop' with 'pop' for removing and returning an element from a list
+    pseudo_code = pseudo_code.replace('pop', 'pop')
+    
+    # Replace 'sort' with 'sort' for sorting a list
+    pseudo_code = pseudo_code.replace('sort', 'sort')
+    
+    # Replace 'reverse' with 'reverse' for reversing a list
+    pseudo_code = pseudo_code.replace('reverse', 'reverse')
+    
+    # Replace 'split' with 'split' for splitting a string into a list
+    pseudo_code = pseudo_code.replace('split', 'split')
+    
+    # Replace 'join' with 'join' for joining a list of strings into a single string
+    pseudo_code = pseudo_code.replace('join', 'join')
+    
+    # Replace 'lower' with 'lower' for converting a string to lowercase
+    pseudo_code = pseudo_code.replace('lower', 'lower')
+    
+    # Replace 'upper' with 'upper' for converting a string to uppercase
+    pseudo_code = pseudo_code.replace('upper', 'upper')
+    
+    # Replace 'strip' with 'strip' for removing leading and trailing whitespaces from a string
+    pseudo_code = pseudo_code.replace('strip', 'strip')
+    
+    # Replace 'replace' with 'replace' for replacing occurrences of a substring in a string
+    pseudo_code = pseudo_code.replace('replace', 'replace')
+    
+    # Replace 'find' with 'find' for finding the index of a substring in a string
+    pseudo_code = pseudo_code.replace('find', 'find')
+    
+    # Replace 'substring' with 'substring' for extracting a substring from a string
+    pseudo_code = pseudo_code.replace('substring', 'substring')
+    
+    # Replace 'concatenate' with '+' for concatenating strings
+    pseudo_code = pseudo_code.replace('concatenate', '+')
+    
+    # Replace 'add' with '+' for adding numbers
+    pseudo_code = pseudo_code.replace('add', '+')
+    
+    # Replace 'subtract' with '-' for subtracting numbers
+    pseudo_code = pseudo_code.replace('subtract', '-')
+    
+    # Replace 'multiply' with '*' for multiplying numbers
+    pseudo_code = pseudo_code.replace('multiply', '*')
+    
+    # Replace 'divide' with '/' for dividing numbers
+    pseudo_code = pseudo_code.replace('divide', '/')
+    
+    # Replace 'modulo' with '%' for getting the remainder of division
+    pseudo_code = pseudo_code.replace('modulo', '%')
+    
+    # Replace 'power' with '**' for raising a number to a power
+    pseudo_code = pseudo_code.replace('power', '**')
+    
+    # Replace 'equal' with '==' for equality comparison
+    pseudo_code = pseudo_code.replace('equal', '==')
+    
+    # Replace 'not equal' with '!=' for inequality comparison
+    pseudo_code = pseudo_code.replace('not equal', '!=')
+    
+    # Replace 'greater than' with '>' for greater than comparison
+    pseudo_code = pseudo_code.replace('greater than', '>')
+    
+    # Replace 'less than' with '<' for less than comparison
+    pseudo_code = pseudo_code.replace('less than', '<')
+    
+    # Replace 'greater than or equal' with '>=' for greater than or equal comparison
+    pseudo_code = pseudo_code.replace('greater than or equal', '>=')
+    
+    # Replace 'less than or equal' with '<=' for less than or equal comparison
+    pseudo_code = pseudo_code.replace('less than or equal', '<=')
+    
+    # Replace 'increment' with '+=' for incrementing a variable
+    pseudo_code = pseudo_code.replace('increment', '+=')
+    
+    # Replace 'decrement' with '-=' for decrementing a variable
+    pseudo_code = pseudo_code.replace('decrement', '-=')
+    
+    # Replace 'comment' with '#' for adding comments
+    pseudo_code = pseudo_code.replace('comment', '#')
+    
+    # Replace 'end' with '' for ending a block (not needed in Python)
+    pseudo_code = pseudo_code.replace('end', '')
+    
+    # Replace 'return' with 'return' for returning a value from a function
+    pseudo_code = pseudo_code.replace('return', 'return')
+    
+    # Replace 'exit' with 'exit()' for exiting the program
+    pseudo_code = pseudo_code.replace('exit', 'exit()')
+    
+    # Replace 'sleep' with 'time.sleep' for pausing the program execution
+    pseudo_code = re.sub(r'sleep\s*\(\s*(\d+)\s*\)', r'time.sleep(\1)', pseudo_code)
+    
+    return pseudo_code
+
+def convert_pseudo_code_to_c(pseudo_code):
+    # Remove leading and trailing whitespaces
+    pseudo_code = pseudo_code.strip()
+    
+    # Replace '->' with '.' for object method calls
+    pseudo_code = pseudo_code.replace('->', '.')
+    
+    # Replace 'is' with '==' for equality comparison
+    pseudo_code = pseudo_code.replace(' is ', ' == ')
+    
+    # Replace 'and' with '&&' for logical 'and' operator
+    pseudo_code = pseudo_code.replace(' and ', ' && ')
+    
+    # Replace 'or' with '||' for logical 'or' operator
+    pseudo_code = pseudo_code.replace(' or ', ' || ')
+    
+    # Replace 'not' with '!' for logical 'not' operator
+    pseudo_code = pseudo_code.replace(' not ', ' !')
+    
+    # Replace 'true' with 'true' for boolean value
+    pseudo_code = pseudo_code.replace('true', 'true')
+    
+    # Replace 'false' with 'false' for boolean value
+    pseudo_code = pseudo_code.replace('false', 'false')
+    
+    # Replace 'null' with 'NULL' for null value
+    pseudo_code = pseudo_code.replace('null', 'NULL')
+    
+    # Replace 'print' with 'printf' for printing output
+    pseudo_code = pseudo_code.replace('print', 'printf')
+    
+    # Replace 'if' with 'if' for conditional statements
+    pseudo_code = pseudo_code.replace('if', 'if')
+    
+    # Replace 'else' with 'else' for else statements
+    pseudo_code = pseudo_code.replace('else', 'else')
+    
+    # Replace 'elif' with 'else if' for else if statements
+    pseudo_code = pseudo_code.replace('elif', 'else if')
+    
+    # Replace 'while' with 'while' for while loops
+    pseudo_code = pseudo_code.replace('while', 'while')
+    
+    # Replace 'for' with 'for' for for loops
+    pseudo_code = pseudo_code.replace('for', 'for')
+    
+    # Replace 'in' with 'in' for iterating over a collection
+    pseudo_code = pseudo_code.replace(' in ', ' in ')
+    
+    # Replace 'range' with 'for' for generating a sequence of numbers
+    pseudo_code = pseudo_code.replace('range', 'for')
+    
+    # Replace 'def' with 'void' for defining a function
+    pseudo_code = pseudo_code.replace('def', 'void')
+    
+    # Replace 'return' with 'return' for returning a value from a function
+    pseudo_code = pseudo_code.replace('return', 'return')
+    
+    # Replace 'import' with '#include' for importing libraries
+    pseudo_code = pseudo_code.replace('import', '#include')
+    
+    # Replace 'class' with 'struct' for defining a class
+    pseudo_code = pseudo_code.replace('class', 'struct')
+    
+    # Replace 'self' with 'this' for referring to the current instance of a class
+    pseudo_code = pseudo_code.replace('self', 'this')
+    
+    # Replace 'new' with 'malloc' for creating a new object
+    pseudo_code = pseudo_code.replace('new', 'malloc')
+    
+    # Replace 'var' with 'auto' for declaring a variable
+    pseudo_code = pseudo_code.replace('var', 'auto')
+    
+    # Replace 'int' with 'int' for declaring an integer variable
+    pseudo_code = pseudo_code.replace('int', 'int')
+    
+    # Replace 'float' with 'float' for declaring a float variable
+    pseudo_code = pseudo_code.replace('float', 'float')
+    
+    # Replace 'string' with 'char*' for declaring a string variable
+    pseudo_code = pseudo_code.replace('string', 'char*')
+    
+    # Replace 'boolean' with 'bool' for declaring a boolean variable
+    pseudo_code = pseudo_code.replace('boolean', 'bool')
+    
+    # Replace 'array' with 'array' for declaring an array variable
+    pseudo_code = pseudo_code.replace('array', 'array')
+    
+    # Replace 'dictionary' with 'map' for declaring a dictionary variable
+    pseudo_code = pseudo_code.replace('dictionary', 'map')
+    
+    # Replace 'list' with 'list' for declaring a list variable
+    pseudo_code = pseudo_code.replace('list', 'list')
+    
+    # Replace 'set' with 'set' for declaring a set variable
+    pseudo_code = pseudo_code.replace('set', 'set')
+    
+    # Replace 'tuple' with 'tuple' for declaring a tuple variable
+    pseudo_code = pseudo_code.replace('tuple', 'tuple')
+    
+    # Replace 'function' with 'function' for declaring a function
+    pseudo_code = pseudo_code.replace('function', 'function')
+    
+    # Replace 'method' with 'method' for declaring a method
+    pseudo_code = pseudo_code.replace('method', 'method')
+    
+    # Replace 'constructor' with 'constructor' for declaring a constructor
+    pseudo_code = pseudo_code.replace('constructor', 'constructor')
+    
+    # Replace 'destructor' with 'destructor' for declaring a destructor
+    pseudo_code = pseudo_code.replace('destructor', 'destructor')
+    
+    # Replace 'private' with 'private' for declaring
