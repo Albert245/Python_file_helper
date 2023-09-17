@@ -63,6 +63,25 @@ def detect_misra_violations(file_path):
                 'Detail': 'The #define directive shall not be used to hide a macro expansion.',
                 'Solution': 'Avoid using the backslash character to split macro definitions across multiple lines.',
             })
+    # Rule 16.7
+    for line_number, line in enumerate(open(file_path, 'r'), start=1):
+        if re.search(r'\bsizeof\s*\(.*\)', line) and not re.search(r'\bsizeof\s*\(.*\s*\*\s*.*\)', line):
+            violations.append({
+                'Rule': '16.7',
+                'Line': line_number,
+                'Detail': 'The object passed to a sizeof operator shall not have an effective type that includes any variably modified type.',
+                'Solution': 'Ensure that the sizeof operator is not applied to an object with a variably modified type.',
+            })
+
+    # Rule 18.4
+    for line_number, line in enumerate(open(file_path, 'r'), start=1):
+        if re.search(r'\bunion\b\s*{.*};', line):
+            violations.append({
+                'Rule': '18.4',
+                'Line': line_number,
+                'Detail': 'A union type declaration shall not contain members with overlapping sequences of bits.',
+                'Solution': 'Ensure that the union declaration does not contain members with overlapping sequences of bits.',
+            })
 
     # ... Add more rules as needed ...
 
