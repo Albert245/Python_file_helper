@@ -1,0 +1,807 @@
+measurements
+---
+ComDia_flgOBFCM_NnHldFlg
+SIA_TSTR_RD_FAIL_STATUS1
+SIA_TSTR_RD_FAIL_STATUS3
+Sia_U2301_C
+Sia_DtcCnt
+VehV_vSign
+BattU_uSens1
+APP_uRaw1ADCRead
+APP_uRaw2ADCRead
+BrkBstP_uRaw
+EnvT_uRaw
+CooltTOut_uRaw
+CooltTIn_uRaw
+CooltTRadrOut_uRaw
+HvbT1_uRaw
+HvbT2_uRaw
+"if (GlbDa_nrHvBattThermCirc < 2) {
+   0xFF
+} else {
+   LoTRadrDsT_uRaw
+}
+"
+   HvbT3_uRaw
+   HvbT4_uRaw
+CooltLvl3_uRaw
+CooltLvl_uRaw
+CooltLvl2_uRaw
+   CooltLvl4_uRaw
+ChademoChrgrIntkT1_uRaw
+ChademoChrgrIntkT2_uRaw
+AcChrgrIntkT_uRaw
+VccCnsrGroup1U_u_f
+UPxP1_uRaw
+"if (GlbDa_stVehTyp != 0x1) {
+   //Type != LR
+    UPxP1_uRaw
+}"
+ThmPmp_fRaw
+SCtPmp_fRaw
+ThmPmp_rRaw
+SCtPmp_rRaw
+CooltPmpInvr_fRaw
+CooltPmpInvr_rRaw
+CooltPmpInvr2_fRaw
+CooltPmpInvr2_rRaw
+CooltPmpHvb_fRaw
+CooltPmpHvb_rRaw
+"SCtPmp_fRaw
+"if (GlbDa_nrWtrPmpHvBattThermEquid < 3) {
+   CooltPmp1Hvb_fRaw
+   CooltPmp1Hvb_rRaw
+   CooltPmp2Hvb_fRaw
+   CooltPmp2Hvb_rRaw
+Airbg_tiPwmInpPerd
+Airbg_rPwmInpRat
+CtpCarrFrq_tiPerRaw_f
+    CtpCarrFrq_tiPerRaw_f
+"PwmCtP_rDtyCycRaw_f 
+(Data type) real32
+(Compu method) RBPtCel_Perc_1p0_1
+(Unit) %
+Note : Please refer to the right cell about how to convert the above message to s tester output.
+"UCtP_uSens_f
+(Compu method) RBPtCel_u_1p0_1
+(Unit) V
+Note : Please refer to the right cell about how to convert the above message to s tester output."
+IntlckChrgPlg_rPs
+IntlckChrgPlg_flgPwrStgReq
+App_r
+BrkBstP_pSens
+BrkBst_pPresAbslt
+EnvT_t
+CooltTOut_t
+CooltTIn_t
+CooltTRadrOut_t
+HvbT1_t_f
+HvbT2_t_f
+   LoTRadrDsT_t_f
+   HvbT3_t_f
+   HvbT4_t_f
+CooltLvl3_stRaw
+CooltLvl_stRaw
+reserved by 0b00
+CooltLvl2_stRaw
+   0x3
+   CooltLv4_stRaw
+ChademoChrgrIntkT1_t_f
+DcChrgrIntkT_t_f
+ChademoChrgrIntkT2_t_f
+DcChrgrIntkT2_t_f
+AcChrgrIntkT_t_f
+ChrgPlgLock_stPosn 
+ChgrPlug_stPxPCcs
+   0xF
+    ChgrPlug_stPxPCcs
+} (BUS)"
+"::: JP variant and US variant :::
+0x0F (fixed value) 
+::: EU variant :::
+#if ((CHRGTYP_CCS_SC == 2) || (CHRGTYP_CCS_SC == 4)) && (CHRGIF_PROXPLT_SC == 1) 
+ChgrPlug_stPxp1IntDebd
+#endif"
+    ChgrPlug_stPxp1IntDebd
+"::: EU variant :::
+T15_st
+T50_st
+ChgrPlug_flgChrgnSeq1
+ChgrPlug_flgChrgnSeq2
+"ChgrPlug_stPxPChademo
+(Data type) uint8
+RBPtEChrDv_stPxP_VERB
+CbnHeatgSwt_stRaw
+FridgeSwt_stRaw
+Brk_stMn
+BrkPedlSwt_st
+HandPrkBrkSwt_stRaw
+RefgntFanSwtHvb1_stRaw
+   RefgntFanSwtHvb2_stRaw
+RefgntPSwtHvb1_stRaw
+   RefgntPSwtHvb2_stRaw
+ChrgPlg_flgChrgnStopReq
+SysOperExtnSwt_stRaw
+MildModSwt_st
+"HvacPmp_nWtrPmpHeatrSpd
+(Data type) sint32
+(Compu method) EngNRmp_Hi
+(Unit) rpm
+(LSB) 0.1[rpm/bit]
+"WtrPmp1_nWtrPmpSysSpd
+"WtrPmp1_nWtrPmpSysSpd2
+(LSB) 0.1[rpm/bit]"
+WtrPmp2_nWtrPmpBatt1Spd
+WtrPmp2_nWtrPmpBatt11Spd
+WtrPmp2_nWtrPmpBatt2Spd
+   WtrPmp2_nWtrPmpBatt12Spd
+   WtrPmp2_nWtrPmpBatt21Spd
+Airbg_stpwm
+ChgrPlug_stCtP
+    ChgrPlug_stCtP
+"ChgrPlug_iCtPLim 
+(Data type) sint16
+(Compu method) RBPtCel_i_0p03125_1
+(Unit) A
+(LSB) 0.03125‬ (=1/32) [A/bit]
+(Data range) -1024.000A. . . 1023.969A
+(Actual range) 6A. . . 80A and 0A
+ChgrPlug_flgDigComRqrd
+(true: digital communication)
+Note : Please refer to the right cell about how to convert the above two messages to a tester output.
+"VehV_stAVASDiag
+  (Data type) uint8
+  (Compu method) OneToOne
+  (Data range) 0x00. . . 0xFF"
+"Com_Tx_MIMAMORI_VEHICLE_STATE
+(Compu method) OneToOne
+(Data range) 0x00. . . 0xFF
+(Actual range) 0x00. . . 0x90
+Note: Refer to FC : ComTx_VCU1 / 200.0.0; 2 about definition of the above variable.
+Dcdc_flgAvl24V (True: "Installed")
+"Com_Tx_MIMAMORI_Vehicle_Speed_VCU
+(Data type) uint16
+(Compu method) RBPtCel_v_0p0078125_250
+(Data range) 0x0000. . . 0xFFFF
+(Actual range) 0x0000. . . 0xFEFF
+Com_Tx_Vcl_Speed_Ave_Drv
+"Com_Tx_MIMAMORI_Brake_Status
+(Actual range) 0x00. . . 0x02
+Brk_flgPActvt
+Com_Tx_Kick_Down_SW
+"GbxPos_stGearLvrReq:
+GBX_GEARLVR_D=5
+GBX_GEARLVR_N=6
+GBX_GEARLVR_R=7
+GBX_GEARLVR_P =8
+UNKNOWN=0"
+"Gbx_stGearLvr:
+VehCoorn_flgLoSplyExtReq (True: "Request")
+ThermMod_stBattTModFinal 
+ThermMod_stBattTModFinal1
+   ThermMod_stBattTModFinal2
+"Com_Tx_MIMAMORI_Chg_Plug_Ctrl_State
+(Actual range) 0x00. . . 0x07
+"Com_Tx_MIMAMORI_Granted_Power_INV
+(Compu method) RBPtCel_pwr_0p1_2
+(Actual range) 0x0000. . . 0x1388
+HvGrid_pwrEmacAvl
+"Com_Tx_MIMAMORI_Granted_Power_DCDC12
+"Com_Tx_MIMAMORI_Granted_Power_DCDC24
+"Com_Tx_MIMAMORI_Granted_Power_V2L
+Com_Tx_MIMAMORI_Granted_Power_ESCM
+"Com_Tx_MIMAMORI_Granted_Power_EAC_B1
+"'if (GlbDa_nrHvBattThermCirc < 2) {
+   Com_Tx_MIMAMORI_Granted_Power_EAC_B2
+Dcdc_flgActnDmd && Not(ElSS_flgActvnPtdDcdc)
+Dcdc_flgActnDmd24V && Not(ElSS_flgActvnPtdDcdc24V)
+Dcdc_flgActnDmd24V01 && Not(ElSS_flgActvnPtdDcdc24V01)
+Dcdc_flgActnDmd24V02 && Not(ElSS_flgActvnPtdDcdc24V02)
+Dcdc_flgActnDmd24V03 && Not(ElSS_flgActvnPtdDcdc24V03)
+Dcdc_flgActnDmd24V04 && Not(ElSS_flgActvnPtdDcdc24V04)
+"if(Dcdc_nr24VEquid < 5){
+} else{
+   Dcdc_flgActnDmd24V05 && Not(ElSS_flgActvnPtdDcdc24V05)
+HeatrECU_flgActnDmd && Not(ElSS_flgActvnPtdPtc)
+HeatrECU_flgActnDmdB && Not(ElSS_flgActvnPtdPtc)
+Com_StEVCanNmState 
+Com_StVehCanNmState
+APP_uLrnMax1
+APP_uLrnMax2
+APP_flgMaxLrnFinshd
+HvGrid_pwrTotAvl 
+HvBatt_pwrMaxRunng
+HvBatt_PwrMaxChrgDrv
+Com_iDchaMaxLim
+GbxPos_flgAutoNeut
+ACCtl_nElecCmprBattHiPLim1
+   0xFFF
+   ACCtl_nElecCmprBattHiPLim2
+HvBatt_ratePwrCns
+HvBatt_ratSOCE
+HvBatt_ratSOCR
+DcmDspUds_Ctn_OBFCM_Fault_a
+Com_Tx_INV_HV_Ready
+Com_Tx_INV_Enb_Req
+Com_Tx_INV_Trq_Req
+Com_Tx_INV1_Trq_Req
+Com_Tx_INV2_Trq_Req
+Com_Tx_INV_Plock_Req
+Com_Tx_Driver_Out_Cab
+"Com_Tx_MCU_VehDrv_Ready
+"Com_Tx_MCU_HvSys_Ready
+Com_Tx_MCU_DcLink_Curr_Max_Dchg
+Com_Tx_MCU_DcLink_Curr_Max_Chg
+Emac_tqDesCom01
+Com_Tx_INV1_Ope_Cmd
+Com_Tx_INV2_Ope_Cmd
+Com_Tx_INV_Sys_Startup_Flg
+Com_Tx_INV_HV_Relay_Flg
+Com_Tx_INV_Veh_Ready_Flg
+Com_Tx_INV1_CutCircuit_Chk_Ena
+Com_Tx_INV2_CutCircuit_Chk_Ena
+Com_Tx_INV_Sys_Shutdown_Flg
+Com_Tx_INV1_Avail_Output_Pwr_Batt
+Com_Tx_INV2_Avail_Output_Pwr_Batt
+Com_Tx_INV1_Avail_Input_Pwr_Batt
+Com_Tx_INV2_Avail_Input_Pwr_Batt
+Com_Tx_BATT_MODE_CMD
+Com_Tx_HV_RELAY_REQ
+ChrgrRly_stRlyDes
+Com_Tx_EPTO_RELAY_REQ
+Dcdc_stDesDcdc
+Dcdc_uDesLvGrid
+Dcdc_iLimHvGrid
+HvBatt_uDesPrecDcLnk
+"if (Dcdc_flgAvl24V == TRUE) {
+   // DCDC24 is installed
+   Com_Tx_DCDC24_Output_Permission
+   // DCDC24 is not installed
+    0x3
+Com_Tx_DCDC24_1_Output_Permission
+Com_Tx_DCDC24_2_Output_Permission
+Com_Tx_DCDC24_3_Output_Permission
+Com_Tx_DCDC24_4_Output_Permission
+   Com_Tx_DCDC24_5_Output_Permission
+   Com_Tx_DCDC24_Req_Vol
+    0xFF
+Com_Tx_DCDC24_1_Req_Vol
+Com_Tx_DCDC24_2_Req_Vol 
+Com_Tx_DCDC24_3_Req_Vol 
+Com_Tx_DCDC24_4_Req_Vol 
+   Com_Tx_DCDC24_5_Req_Vol
+   Dcdc_tAct24V
+Dcdc_tAct24V01
+Dcdc_tAct24V02
+Dcdc_tAct24V03
+Dcdc_tAct24V04
+   Dcdc_tAct24V05
+   Dcdc_uLvAct24V
+Dcdc_uLvAct24V01
+Dcdc_uLvAct24V02
+Dcdc_uLvAct24V03
+Dcdc_uLvAct24V04
+   Dcdc_uLvAct24V05
+   Dcdc_iLvAct24V
+Dcdc_iLvAct24V01
+Dcdc_iLvAct24V02
+Dcdc_iLvAct24V03
+Dcdc_iLvAct24V04
+   Dcdc_iLvAct24V05
+   Com_Rx_DCDC24_Rx_Err
+Com_Rx_DCDC24_1_Rx_Err
+Com_Rx_DCDC24_2_Rx_Err
+Com_Rx_DCDC24_3_Rx_Err
+Com_Rx_DCDC24_4_Rx_Err
+   Com_Rx_DCDC24_5_Rx_Err
+   Com_Rx_DCDC24_Output_Stat
+} "
+Com_Rx_DCDC24_1_Output_Stat
+Com_Rx_DCDC24_2_Output_Stat
+Com_Rx_DCDC24_3_Output_Stat
+Com_Rx_DCDC24_4_Output_Stat
+   Com_Rx_DCDC24_5_Output_Stat
+   Com_Rx_DCDC24_Cur_Limit
+Com_Rx_DCDC24_1_Cur_Limit
+Com_Rx_DCDC24_2_Cur_Limit
+Com_Rx_DCDC24_3_Cur_Limit
+Com_Rx_DCDC24_4_Cur_Limit
+   Com_Rx_DCDC24_5_Cur_Limit
+   Com_Rx_DCDC24_OverTemp_Limit
+Com_Rx_DCDC24_1_OverTemp_Limit
+Com_Rx_DCDC24_2_OverTemp_Limit
+Com_Rx_DCDC24_3_OverTemp_Limit
+Com_Rx_DCDC24_4_OverTemp_Limit
+   Com_Rx_DCDC24_5_OverTemp_Limit
+   Com_Rx_DCDC24_Internal_Fail
+Com_Rx_DCDC24_1_Internal_Fail
+Com_Rx_DCDC24_2_Internal_Fail
+Com_Rx_DCDC24_3_Internal_Fail
+Com_Rx_DCDC24_4_Internal_Fail
+   Com_Rx_DCDC24_5_Internal_Fail
+   Com_Rx_DCDC24_Output_LoVol_Protect
+Com_Rx_DCDC24_1_Output_LoVol_Protect
+Com_Rx_DCDC24_2_Output_LoVol_Protect
+Com_Rx_DCDC24_3_Output_LoVol_Protect
+Com_Rx_DCDC24_4_Output_LoVol_Protect
+   Com_Rx_DCDC24_5_Output_LoVol_Protect
+   Com_Rx_DCDC24_Input_LoVol_Protect
+Com_Rx_DCDC24_1_Input_LoVol_Protect
+Com_Rx_DCDC24_2_Input_LoVol_Protect
+Com_Rx_DCDC24_3_Input_LoVol_Protect
+Com_Rx_DCDC24_4_Input_LoVol_Protect
+   Com_Rx_DCDC24_5_Input_LoVol_Protect
+   Com_Rx_DCDC24_Input_OverVol_Protect
+Com_Rx_DCDC24_1_Input_OverVol_Protect
+Com_Rx_DCDC24_2_Input_OverVol_Protect
+Com_Rx_DCDC24_3_Input_OverVol_Protect
+Com_Rx_DCDC24_4_Input_OverVol_Protect
+   Com_Rx_DCDC24_5_Input_OverVol_Protect
+   Com_Rx_DCDC24_Output_OverVol_Protect
+Com_Rx_DCDC24_1_Output_OverVol_Protect
+Com_Rx_DCDC24_2_Output_OverVol_Protect
+Com_Rx_DCDC24_3_Output_OverVol_Protect
+Com_Rx_DCDC24_4_Output_OverVol_Protect
+   Com_Rx_DCDC24_5_Output_OverVol_Protect
+   Com_Rx_DCDC24_OverTemp_Protect
+Com_Rx_DCDC24_1_OverTemp_Protect
+Com_Rx_DCDC24_2_OverTemp_Protect
+Com_Rx_DCDC24_3_OverTemp_Protect
+Com_Rx_DCDC24_4_OverTemp_Protect
+   Com_Rx_DCDC24_5_OverTemp_Protect
+   Com_Rx_DCDC24_Internal_Protect
+Com_Rx_DCDC24_1_Internal_Protect
+Com_Rx_DCDC24_2_Internal_Protect
+Com_Rx_DCDC24_3_Internal_Protect
+Com_Rx_DCDC24_4_Internal_Protect
+   Com_Rx_DCDC24_5_Internal_Protect
+   Com_Rx_DCDC24_Output_OverCur_Protect
+Com_Rx_DCDC24_1_Output_OverCur_Protect
+Com_Rx_DCDC24_2_Output_OverCur_Protect
+Com_Rx_DCDC24_3_Output_OverCur_Protect
+Com_Rx_DCDC24_4_Output_OverCur_Protect
+   Com_Rx_DCDC24_5_Output_OverCur_Protect
+   Com_Rx_DCDC24_Output_DevVol_Err
+Com_Rx_DCDC24_1_Output_DevVol_Err
+Com_Rx_DCDC24_2_Output_DevVol_Err
+Com_Rx_DCDC24_3_Output_DevVol_Err
+Com_Rx_DCDC24_4_Output_DevVol_Err
+   Com_Rx_DCDC24_5_Output_DevVol_Err
+   Com_Rx_DCDC24_TempSens_Error
+Com_Rx_DCDC24_1_TempSens_Error
+Com_Rx_DCDC24_2_TempSens_Error
+Com_Rx_DCDC24_3_TempSens_Error
+Com_Rx_DCDC24_4_TempSens_Error
+   Com_Rx_DCDC24_5_TempSens_Error
+   Com_Rx_DCDC24_Output_VolDetect_Err
+Com_Rx_DCDC24_1_Output_VolDetect_Err
+Com_Rx_DCDC24_2_Output_VolDetect_Err
+Com_Rx_DCDC24_3_Output_VolDetect_Err
+Com_Rx_DCDC24_4_Output_VolDetect_Err
+   Com_Rx_DCDC24_5_Output_VolDetect_Err
+   Com_Rx_DCDC24_Output_CurDetect_Err
+Com_Rx_DCDC24_1_Output_CurDetect_Err
+Com_Rx_DCDC24_2_Output_CurDetect_Err
+Com_Rx_DCDC24_3_Output_CurDetect_Err
+Com_Rx_DCDC24_4_Output_CurDetect_Err
+   Com_Rx_DCDC24_5_Output_CurDetect_Err
+Com_Tx_HV_Power_Limit_Req
+Com_Tx_Batt_Cooling_Req
+Com_Tx_HV_Run_Permit
+Com_Rx_HVH_Run_Req
+ACCtl_flgElecAirCdngModReq1
+Com_Rx_Gw_Raw_EAC_mode_req
+   ACCtl_flgElecAirCdngModReq2
+Com_Rx_EAC_B1_spd_act
+Com_Rx_Gw_Raw_EAC_spd_act
+   0xFFFF
+   Com_Rx_EAC_B2_spd_act
+Com_Rx_EAC_B1_lmt_operation
+Com_Rx_Gw_Raw_EAC_lmt_operation
+   Com_Rx_EAC_B2_lmt_operation
+Com_Rx_EAC_B1_HV_volt_act
+Com_Rx_EAC_HV_volt_act
+   Com_Rx_EAC_B2_HV_volt_act
+Com_Rx_EAC_B1_HV_pwr_act
+Com_Rx_EAC_HV_pwr_act
+   Com_Rx_EAC_B2_HV_pwr_act
+Com_Rx_EAC_B1_inv_temp
+Com_Rx_Gw_Raw_EAC_inv_temp
+   Com_Rx_EAC_B2_inv_temp
+Com_Rx_EAC_B1_output_curr
+Com_Rx_Gw_Raw_EAC_output_curr
+   Com_Rx_EAC_B2_output_curr
+Com_Rx_EAC_B1_DIAG_overload
+Com_Rx_Gw_Raw_EAC_DIAG_overload
+   Com_Rx_EAC_B2_DIAG_overload
+Com_Rx_EAC_B1_stat
+Com_Rx_Gw_Raw_EAC_stat
+   Com_Rx_EAC_B2_stat
+Com_Rx_EAC_B1_DIAG_HV
+Com_Rx_Gw_Raw_EAC_DIAG_HV
+   Com_Rx_EAC_B2_DIAG_HV
+Com_Rx_EAC_B1_DIAG_temp
+Com_Rx_Gw_Raw_EAC_DIAG_temp
+   Com_Rx_EAC_B2_DIAG_temp
+Com_Rx_EAC_B1_DIAG_LIN_comm
+Com_Rx_EAC_DIAG_LIN_comm
+   Com_Rx_EAC_B2_DIAG_LIN_comm
+Com_Rx_EAC_B1_DIAG_internal
+Com_Rx_Gw_Raw_EAC_DIAG_internal
+   Com_Rx_EAC_B2_DIAG_internal
+Com_Rx_EAC_B1_DIAG_temp_sensor
+Com_Rx_Gw_Raw_EAC_DIAG_temp_sensor
+   Com_Rx_EAC_B2_DIAG_temp_sensor
+Com_Rx_EAC_B1_DIAG_curr_sensor
+Com_Rx_Gw_Raw_EAC_DIAG_curr_sensor
+   Com_Rx_EAC_B2_DIAG_curr_sensor
+Com_Rx_EAC_B1_DIAG_cpu
+Com_Rx_Gw_Raw_EAC_DIAG_cpu
+   Com_Rx_EAC_B2_DIAG_cpu
+Com_Rx_EAC_B1_DIAG_mot_ctrl
+Com_Rx_Gw_Raw_EAC_DIAG_mot_ctrl
+   Com_Rx_EAC_B2_DIAG_mot_ctrl
+Com_Rx_EAC_B1_DIAG_response
+Com_Rx_EAC_DIAG_response
+   Com_Rx_EAC_B2_DIAG_response
+Com_Tx_IG_Switch_Status
+Com_Tx_HTR1_pwr_max
+Com_Tx_HTR_B1_pwr_max
+Com_Tx_HTR_B_pwr_max
+   Com_Tx_HTR_B2_pwr_max
+Com_Tx_HTR1_coolant_temp_cmd 
+Com_Tx_HTR_B1_coolant_temp_cmd
+Com_Tx_HTR_B_coolant_temp_cmd
+   Com_Tx_HTR_B2_coolant_temp_cmd
+Com_Tx_HTR1_output_req
+Com_Tx_HTR_B1_output_req
+Com_Tx_HTR_B_output_req
+   Com_Tx_HTR_B2_output_req
+Com_Rx_HTR1_stat
+Com_Rx_HTR_B1_stat
+Com_Rx_HTR_B_stat
+   Com_Rx_HTR_B2_stat
+Com_Rx_HTR1_protect_ovht_actv
+Com_Rx_HTR_B1_protect_ovht_actv
+Com_Rx_HTR_B_protect_ovht_actv
+   Com_Rx_HTR_B2_protect_ovht_actv
+Com_Rx_HTR1_coolant_temp_in
+Com_Rx_HTR_B1_coolant_temp_in
+Com_Rx_HTR_B_coolant_temp_in
+   Com_Rx_HTR_B2_coolant_temp_in
+Com_Rx_HTR1_coolant_temp_out
+Com_Rx_HTR_B1_coolant_temp_out
+Com_Rx_HTR_B_coolant_temp_out
+   Com_Rx_HTR_B2_coolant_temp_out
+Com_Rx_HTR1_HV_volt_act
+Com_Rx_HTR_B1_HV_volt_act
+Com_Rx_HTR_B_HV_volt_act
+   Com_Rx_HTR_B2_HV_volt_act
+Com_Rx_HTR1_HV_pwr_act
+Com_Rx_HTR_B1_HV_pwr_act
+Com_Rx_HTR_B_HV_pwr_act
+   Com_Rx_HTR_B2_HV_pwr_act
+Com_Rx_HTR1_DIAG_LIN_comm
+Com_Rx_HTR_B1_DIAG_LIN_comm
+Com_Rx_HTR_B_DIAG_LIN_comm
+   Com_Rx_HTR_B2_DIAG_LIN_comm
+Com_Rx_HTR1_DIAG_internal_comm
+Com_Rx_HTR_B1_DIAG_internal_comm
+Com_Rx_HTR_B_DIAG_internal_comm
+   Com_Rx_HTR_B2_DIAG_internal_comm
+Com_Rx_HTR1_DIAG_volt_hi
+Com_Rx_HTR_B1_DIAG_volt_hi
+Com_Rx_HTR_B_DIAG_volt_hi
+   Com_Rx_HTR_B2_DIAG_volt_hi
+Com_Rx_HTR1_DIAG_volt_lo
+Com_Rx_HTR_B1_DIAG_volt_lo
+Com_Rx_HTR_B_DIAG_volt_lo
+   Com_Rx_HTR_B2_DIAG_volt_lo
+Com_Rx_HTR1_DIAG_coolant_temp_hi
+Com_Rx_HTR_B1_DIAG_coolant_temp_hi
+Com_Rx_HTR_B_DIAG_coolant_temp_hi
+   Com_Rx_HTR_B2_DIAG_coolant_temp_hi
+Com_Rx_HTR1_DIAG_ovht
+Com_Rx_HTR_B1_DIAG_ovht
+Com_Rx_HTR_B_DIAG_ovht
+   Com_Rx_HTR_B2_DIAG_ovht
+Com_Rx_HTR1_DIAG_hw
+Com_Rx_HTR_B1_DIAG_hw
+Com_Rx_HTR_B_DIAG_hw
+   Com_Rx_HTR_B2_DIAG_hw
+Com_Rx_HTR1_DIAG_temp_in_sens
+Com_Rx_HTR_B1_DIAG_temp_in_sens
+Com_Rx_HTR_B_DIAG_temp_in_sens
+   Com_Rx_HTR_B2_DIAG_temp_in_sens
+Com_Rx_HTR1_DIAG_temp_out_sens
+Com_Rx_HTR_B1_DIAG_temp_out_sens
+Com_Rx_HTR_B_DIAG_temp_out_sens
+   Com_Rx_HTR_B2_DIAG_temp_out_sens
+Com_Rx_HTR1_DIAG_ovht_sens
+Com_Rx_HTR_B1_DIAG_ovht_sens
+Com_Rx_HTR_B_DIAG_ovht_sens
+   Com_Rx_HTR_B2_DIAG_ovht_sens
+Com_Rx_HTR1_DIAG_circuit
+Com_Rx_HTR_B1_DIAG_circuit
+Com_Rx_HTR_B_DIAG_circuit
+   Com_Rx_HTR_B2_DIAG_circuit
+ "
+Com_Rx_HTR1_DIAG_curr_hi
+Com_Rx_HTR_B1_DIAG_curr_hi
+Com_Rx_HTR_B_DIAG_curr_hi
+   Com_Rx_HTR_B2_DIAG_curr_hi
+Com_Rx_HTR1_DIAG_memory
+Com_Rx_HTR_B1_DIAG_memory
+Com_Rx_HTR_B_DIAG_memory
+   Com_Rx_HTR_B2_DIAG_memory
+Com_Rx_HTR1_DIAG_dcdc_volt
+Com_Rx_HTR_B1_DIAG_dcdc_volt
+Com_Rx_HTR_B_DIAG_dcdc_volt
+   Com_Rx_HTR_B2_DIAG_dcdc_volt
+Com_Tx_HTR2_pwr_max
+Com_Tx_HTR_C1_pwr_max
+Com_Tx_HTR_C_pwr_max
+Com_Tx_HTR_C2_pwr_max
+Com_Tx_HTR_C3_pwr_max
+Com_Tx_HTR_C4_pwr_max
+Com_Tx_HTR2_coolant_temp_cmd
+Com_Tx_HTR_C1_coolant_temp_cmd
+Com_Tx_HTR_C_coolant_temp_cmd
+Com_Tx_HTR_C2_coolant_temp_cmd
+Com_Tx_HTR_C3_coolant_temp_cmd
+Com_Tx_HTR_C4_coolant_temp_cmd
+Com_Tx_HTR2_output_req
+Com_Tx_HTR_C1_output_req
+Com_Tx_HTR_C_output_req
+Com_Tx_HTR_C2_output_req 
+Com_Tx_HTR_C3_output_req 
+Com_Tx_HTR_C4_output_req 
+Com_Rx_HTR2_stat
+Com_Rx_HTR_C1_stat
+Com_Rx_HTR_C_stat
+Com_Rx_HTR_C2_stat
+Com_Rx_HTR_C3_stat
+Com_Rx_HTR_C4_stat
+Com_Rx_HTR2_protect_ovht_actv
+Com_Rx_HTR_C1_protect_ovht_actv
+Com_Rx_HTR_C_protect_ovht_actv
+Com_Rx_HTR_C2_protect_ovht_actv
+Com_Rx_HTR_C3_protect_ovht_actv
+Com_Rx_HTR_C4_protect_ovht_actv
+Com_Rx_HTR2_coolant_temp_in
+Com_Rx_HTR_C1_coolant_temp_in
+Com_Rx_HTR_C_coolant_temp_in
+Com_Rx_HTR_C2_coolant_temp_in
+Com_Rx_HTR_C3_coolant_temp_in
+Com_Rx_HTR_C4_coolant_temp_in
+Com_Rx_HTR2_coolant_temp_out
+Com_Rx_HTR_C1_coolant_temp_out
+Com_Rx_HTR_C_coolant_temp_out
+Com_Rx_HTR_C2_coolant_temp_out
+Com_Rx_HTR_C3_coolant_temp_out
+Com_Rx_HTR_C4_coolant_temp_out
+Com_Rx_HTR2_HV_volt_act
+Com_Rx_HTR_C1_HV_volt_act
+Com_Rx_HTR_C_HV_volt_act
+Com_Rx_HTR_C2_HV_volt_act
+Com_Rx_HTR_C3_HV_volt_act
+Com_Rx_HTR_C4_HV_volt_act
+Com_Rx_HTR2_HV_pwr_act
+Com_Rx_HTR_C1_HV_pwr_act
+Com_Rx_HTR_C_HV_pwr_act
+Com_Rx_HTR_C2_HV_pwr_act
+Com_Rx_HTR_C3_HV_pwr_act
+Com_Rx_HTR_C4_HV_pwr_act
+Com_Rx_HTR2_DIAG_LIN_comm
+Com_Rx_HTR_C1_DIAG_LIN_comm
+Com_Rx_HTR_C_DIAG_LIN_comm
+Com_Rx_HTR_C2_DIAG_LIN_comm
+Com_Rx_HTR_C3_DIAG_LIN_comm
+Com_Rx_HTR_C4_DIAG_LIN_comm
+Com_Rx_HTR2_DIAG_internal_comm
+Com_Rx_HTR_C1_DIAG_internal_comm
+Com_Rx_HTR_C_DIAG_internal_comm
+Com_Rx_HTR_C2_DIAG_internal_comm
+Com_Rx_HTR_C3_DIAG_internal_comm
+Com_Rx_HTR_C4_DIAG_internal_comm
+Com_Rx_HTR2_DIAG_volt_hi
+Com_Rx_HTR_C1_DIAG_volt_hi
+Com_Rx_HTR_C_DIAG_volt_hi
+Com_Rx_HTR_C2_DIAG_volt_hi
+Com_Rx_HTR_C3_DIAG_volt_hi
+Com_Rx_HTR_C4_DIAG_volt_hi
+Com_Rx_HTR2_DIAG_volt_lo
+Com_Rx_HTR_C1_DIAG_volt_lo
+Com_Rx_HTR_C_DIAG_volt_lo
+Com_Rx_HTR_C2_DIAG_volt_lo
+Com_Rx_HTR_C4_DIAG_volt_lo
+Com_Rx_HTR2_DIAG_coolant_temp_hi
+Com_Rx_HTR_C1_DIAG_coolant_temp_hi
+Com_Rx_HTR_C_DIAG_coolant_temp_hi
+Com_Rx_HTR_C2_DIAG_coolant_temp_hi
+Com_Rx_HTR_C3_DIAG_coolant_temp_hi
+Com_Rx_HTR_C4_DIAG_coolant_temp_hi
+Com_Rx_HTR2_DIAG_ovht
+Com_Rx_HTR_C1_DIAG_ovht
+Com_Rx_HTR_C_DIAG_ovht
+Com_Rx_HTR_C2_DIAG_ovht
+Com_Rx_HTR_C3_DIAG_ovht
+Com_Rx_HTR_C4_DIAG_ovht
+Com_Rx_HTR2_DIAG_hw
+Com_Rx_HTR_C1_DIAG_hw
+Com_Rx_HTR_C_DIAG_hw
+Com_Rx_HTR_C2_DIAG_hw
+Com_Rx_HTR_C3_DIAG_hw
+Com_Rx_HTR_C4_DIAG_hw
+Com_Rx_HTR2_DIAG_temp_in_sens
+Com_Rx_HTR_C1_DIAG_temp_in_sens
+Com_Rx_HTR_C_DIAG_temp_in_sens
+Com_Rx_HTR_C2_DIAG_temp_in_sens
+Com_Rx_HTR_C3_DIAG_temp_in_sens
+Com_Rx_HTR_C4_DIAG_temp_in_sens
+Com_Rx_HTR2_DIAG_temp_out_sens
+Com_Rx_HTR_C1_DIAG_temp_out_sens
+Com_Rx_HTR_C_DIAG_temp_out_sens
+Com_Rx_HTR_C2_DIAG_temp_out_sens
+Com_Rx_HTR_C3_DIAG_temp_out_sens
+Com_Rx_HTR_C4_DIAG_temp_out_sens
+Com_Rx_HTR2_DIAG_ovht_sens
+Com_Rx_HTR_C1_DIAG_ovht_sens
+Com_Rx_HTR_C_DIAG_ovht_sens
+Com_Rx_HTR_C2_DIAG_ovht_sens
+Com_Rx_HTR_C3_DIAG_ovht_sens
+Com_Rx_HTR_C4_DIAG_ovht_sens
+Com_Rx_HTR2_DIAG_circuit
+Com_Rx_HTR_C1_DIAG_circuit
+Com_Rx_HTR_C_DIAG_circuit
+Com_Rx_HTR_C2_DIAG_circuit
+Com_Rx_HTR_C3_DIAG_circuit
+Com_Rx_HTR_C4_DIAG_circuit
+Com_Rx_HTR2_DIAG_curr_hi
+Com_Rx_HTR_C1_DIAG_curr_hi
+Com_Rx_HTR_C_DIAG_curr_hi
+Com_Rx_HTR_C2_DIAG_curr_hi
+Com_Rx_HTR_C3_DIAG_curr_hi
+Com_Rx_HTR_C4_DIAG_curr_hi
+Com_Rx_HTR2_DIAG_memory
+Com_Rx_HTR_C1_DIAG_memory
+Com_Rx_HTR_C_DIAG_memory
+Com_Rx_HTR_C2_DIAG_memory
+Com_Rx_HTR_C3_DIAG_memory
+Com_Rx_HTR_C4_DIAG_memory
+Com_Rx_HTR2_DIAG_dcdc_volt
+Com_Rx_HTR_C1_DIAG_dcdc_volt
+Com_Rx_HTR_C_DIAG_dcdc_volt
+Com_Rx_HTR_C2_DIAG_dcdc_volt
+Com_Rx_HTR_C3_DIAG_dcdc_volt
+Com_Rx_HTR_C4_DIAG_dcdc_volt
+"ChrgrSt_stChrgnEna
+    ChrgrSt_stChrgnEna
+Com_Tx_OBC_S2_State
+    Com_Tx_OBC_S2_State
+ChrgrVal_iChrgrDes
+    ChrgrVal_iChrgrDes
+"Com_Tx_MIMAMORI_QCV2L_Actual_Volt
+(Actual range) 0x0000. . . 0x0FFF
+HLCCcs_uEvseDcPrsnt
+"Com_Tx_MIMAMORI_QCV2L_Actual_Curr
+(Compu method) RBPtCel_i_1p0_2
+HLCCcs_iEvseDcPrsnt
+"Com_Tx_MIMAMORI_QCV2L_Available_Curr
+HLCCcs_iEvseDcMax
+"Com_Tx_MIMAMORI_QC_Command_Curr
+"if ((VehCoorn_stBitsExtd & 0x000003FC)>0){
+ // Bit2 or Bit3 or … Bit9 ON 
+ Com_nrPtcolChrgrChademo
+  0xFF;
+"if ((VehCoorn_stBitsExtd & 0x000C0000)>0){
+  // Bit18 or Bit19 ON
+  Com_nrDchaSeqPwrSys
+Com_Tx_EV_KASO_STATE 
+Com_Tx_EV_KASO_USABLE_PWR
+Com_Rx_KASO_COMN_IDENTIFICATION
+Com_Rx_KASO_COMN_RLY_STATE
+Com_Rx_KASO_COMN_CONSUMPTION
+GbxPos_stPBWActrReq
+VehCoorn_stPBWDataWrEna
+VehCoorn_stPBWSplyRlyDiagEna
+GbxPos_stParkLock
+GbxPos_stPBWRejP
+Com_Tx_DCDC650_Ope_Req
+Com_Tx_DCDC650_IgKey
+Com_Tx_DCDC650_VehDrv_Ready
+Com_Tx_DCDC650_Shutdown_Req
+Com_Tx_DCDC650_RunCnv_Num
+Com_Tx_DCDC650_Pwr_Inv
+Com_Tx_DCDC650_Pwr_Aux
+Com_Tx_DCDC650_HvRly_Cnct_Num
+Com_Tx_DCDC650_Volt_Inv
+Com_Tx_DCDC650_Volt_Bat
+Com_Tx_DCDC650_Curr_Bat
+GlbDa_stVehTyp
+"// Byte Position #1
+if (Com_Tx_DCDC650_RunCnv_Num < 1) {
+    0x03;
+    Com_Rx_DCDC650_1_Ope_Avail;
+// Byte Position #2
+if (Com_Tx_DCDC650_RunCnv_Num < 2) {
+    Com_Rx_DCDC650_2_Ope_Avail;
+    .
+    Com_Rx_DCDC650_1_Ready_Cnv;
+    Com_Rx_DCDC650_2_Ready_Cnv;
+    Com_Rx_DCDC650_1_Run_Stat;
+    Com_Rx_DCDC650_2_Run_Stat;
+    0xFF;
+    Com_Rx_DCDC650_1_Temp;
+    Com_Rx_DCDC650_2_Temp;
+    0x3FF;
+    Com_Rx_DCDC650_1_Curr_HvHi_Max_Drv;
+    Com_Rx_DCDC650_2_Curr_HvHi_Max_Drv;
+    Com_Rx_DCDC650_1_Curr_HvHi_Max_Reg;
+    Com_Rx_DCDC650_2_Curr_HvHi_Max_Reg;
+    0xFFF;
+    Com_Rx_DCDC650_1_Volt_HvLo_Act;
+    Com_Rx_DCDC650_2_Volt_HvLo_Act;
+    Com_Rx_DCDC650_1_Volt_HvHi_Act;
+    Com_Rx_DCDC650_2_Volt_HvHi_Act;
+    Com_Rx_DCDC650_1_Curr_HvLo_Act;
+    Com_Rx_DCDC650_2_Curr_HvLo_Act;
+    Com_Rx_DCDC650_1_Curr_HvHi_Act;
+    Com_Rx_DCDC650_2_Curr_HvHi_Act;
+"// DCDC650_1
+    0x3;
+    Com_Rx_DCDC650_1_Rx_Err;
+    Com_Rx_DCDC650_1_Internal_Err;
+    Com_Rx_DCDC650_1_WTempSens_Err;
+    Com_Rx_DCDC650_1_Over_Curr_Err;
+    Com_Rx_DCDC650_1_Over_Volt_Err;
+    Com_Rx_DCDC650_1_Internal_Err2;
+    Com_Rx_DCDC650_1_LoVolt_Aux;
+// DCDC650_2
+    Com_Rx_DCDC650_2_Rx_Err;
+..."
+0x0 fixed value
+Com_Tx_ESCM_Max_Allowed_Current
+Com_Rx_ESCM_Actual_Speed
+Com_Rx_ESCM_Run_Status
+Com_Rx_ESCM_Comp_Temp_State
+Com_Rx_ESCM_Actual_Current
+"// Byte Position #1~8
+Com_Rx_EWP_SYS1_Freq_Act
+Com_Rx_EWP_SYS2_Freq_Act
+Com_Rx_EWP_SYS3_Freq_Act
+Com_Rx_EWP_SYS4_Freq_Act
+// Byte Position #9~10
+if (GlbDa_nrWtrPmpSysEquid < 5) {
+    0xFFFF;
+  Com_Rx_EWP_SYS5_Freq_Act
+// Byte Position #11~12
+if (GlbDa_nrWtrPmpSysEquid < 6) {
+  Com_Rx_EWP_SYS6_Freq_Act
+// Byte Position #13~14
+Com_Rx_EWP_SYS7_Freq_Act
+Com_Rx_EWP_SYS1_Duty_Act
+Com_Rx_EWP_SYS2_Duty_Act
+Com_Rx_EWP_SYS3_Duty_Act
+Com_Rx_EWP_SYS4_Duty_Act
+  Com_Rx_EWP_SYS5_Duty_Act
+  Com_Rx_EWP_SYS6_Duty_Act
+Com_Rx_EWP_SYS7_Duty_Act"
+"// Byte Position #1~4
+FreqToRPM(Com_Rx_EWP_SYS1_Freq_Act)
+FreqToRPM(Com_Rx_EWP_SYS2_Freq_Act)
+FreqToRPM(Com_Rx_EWP_SYS3_Freq_Act)
+FreqToRPM(Com_Rx_EWP_SYS4_Freq_Act)
+// Byte Position #5~6
+  FreqToRPM(Com_Rx_EWP_SYS5_Freq_Act)
+  FreqToRPM(Com_Rx_EWP_SYS6_Freq_Act)
+// Byte Position #7
+FreqToRPM(Com_Rx_EWP_SYS7_Freq_Act)"
+GlbDa_rTqDftl
+GlbDa_rTqGbx
+TrsmEmac_ratTqSecAxle
+TrsmEmac_ratTqPrimAxle
+"GlbDa_lWhlCirc
+   *…This RAMCell is circumference,
+        so need to calculate radius as follows.
+        ""tire radius = GlbDa_lWhlCirc/(2*pi)""

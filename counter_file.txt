@@ -1,0 +1,10 @@
+ThmPmp_fRaw
+WtrPmp2_nWtrPmpBatt2Spd
+HvBatt_egyTotExtChrgn
+Com_Tx_EAC_B1_mode_req
+ElSS_flgActvnPtdDcdc24V
+Com_Tx_EAC_B2_mode_req
+WtrPmp2_nWtrPmpBatt1Spd
+WtrPmp2_nWtrPmpBatt21Spd		  
+Dcdc_flgActnDmd24V
+ThmPmp_rRaw

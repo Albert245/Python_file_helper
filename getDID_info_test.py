@@ -89,7 +89,7 @@ print('row max : '+str(row_max)+'\tcolumn max : '+str(col_max))
 
 for value in wsl.iter_rows(1,1,1,col_max,values_only=True):
     header = value
-print(header)
+    print("header "+ str(header))
 Condition_pos = []
 RAMCELL_pos = []
 
