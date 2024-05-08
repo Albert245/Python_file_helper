@@ -17,7 +17,7 @@ import re
 
 D_ID = 'DID'
 filename = 'DID_sheet'
-filename_proposal = 'Create_function_VBA'
+filename_proposal = 'Create_function_VBA.xlsm'
 
 work_sheet = 'Info_sheet'
 work_sheet_proposal = 'proposal'
@@ -37,6 +37,7 @@ def find_ws(keyname,wbl):
 
 def Find_file_Name(dir,keyname):
     fileNames = os.listdir(dir)
+    file_name = ''
     for fileName in fileNames:
         if(keyname in fileName):
             file_name = fileName
@@ -73,10 +74,10 @@ def get_cell(extract_cell):
 #======================================================================
 #Access Excel proposal
 start_time = time.time()
-File_dir_proposal = Find_file_Name(cwd,filename_proposal)
 
-print('Accessing '+str(File_dir_proposal))
-wbl_proposal = load_workbook(File_dir_proposal)
+
+print('Accessing '+str(filename_proposal))
+wbl_proposal = load_workbook(filename_proposal)
 ws_name_proposal = find_ws(work_sheet_proposal,wbl_proposal.sheetnames)
 if ws_name_proposal != '':
     wsl_proposal = wbl_proposal[ws_name_proposal]
@@ -115,7 +116,11 @@ for row in range(4,row_max):
 
     # Byte no
     byte_pos = str(wsl_proposal['H'][row].value)
-    DID_info_proposal.append(byte_pos[0:1])
+    start_pos = byte_pos.find('-')
+    if start_pos :
+        DID_info_proposal.append(byte_pos[0:start_pos])
+    else:
+        DID_info_proposal.append(byte_pos[0:])
 
     # Addr sp Phys
     DID_info_proposal.append('x')

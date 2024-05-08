@@ -1,0 +1,144 @@
+                                <CHAPTER>
+                                    <LONG-NAME>
+                                        <L-4 L="for-all">ID 0x{{DID}}: {{content}}</L-4>
+                                    </LONG-NAME>
+                                    <SHORT-NAME>DID_0xDID</SHORT-NAME>
+                                    <TABLE>
+                                        <TABLE-CAPTION>
+                                            <LONG-NAME>
+                                                <L-4 L="for-all">ID ${{DID}}: Read AVSID  </L-4>
+                                            </LONG-NAME>
+                                            <SHORT-NAME>DcmDspUds_DID_{{DID}}h_Read</SHORT-NAME>
+                                        </TABLE-CAPTION>
+                                        <TGROUP COLS="6">
+                                            <COLSPEC COLWIDTH="0.25*" COLNAME="col1" COLNUM="1"/>
+                                            <COLSPEC COLWIDTH="1.14*" COLNAME="col2" COLNUM="2"/>
+                                            <COLSPEC COLWIDTH="0.74*" COLNAME="col3" COLNUM="3"/><COLSPEC COLWIDTH="0.56*" COLNUM="4" COLNAME="col1200943271"/><COLSPEC COLWIDTH="0.59*" COLNUM="5" COLNAME="col825124390"/><COLSPEC COLWIDTH="0.23*" COLNUM="6" COLNAME="col1098608754"/>
+                                            <THEAD>
+                                                <ROW>
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Position</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Explanation</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Storage Location</L-1>
+                                                        </P>
+                                                    </ENTRY>
+<ENTRY COLNAME="col1200943271"><P>
+                                                            <L-1 L="for-all">Hex range</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col825124390"><P>
+                                                            <L-1 L="for-all">Physical range</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col1098608754"><P>
+                                                            <L-1 L="for-all">Unit</L-1>
+                                                        </P></ENTRY>
+                                                </ROW>
+                                            </THEAD>
+                                            <TBODY>
+                                                <ROW>
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">@POS</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Get the value of AVSID for the Diagnostic-Tester</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">AVSID (AVS interface)</L-1>
+                                                        </P>
+                                                    </ENTRY>
+<ENTRY COLNAME="col1200943271"><P>
+                                                            <L-1 L="for-all">HEXRANGE</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col825124390"><P>
+                                                            <L-1 L="for-all">PHYSRANGE</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col1098608754"><P>
+                                                            <L-1 L="for-all">@UNIT</L-1>
+                                                        </P></ENTRY>
+                                                </ROW>
+                                            </TBODY>
+                                        </TGROUP>
+                                    </TABLE>
+                                    <TABLE>
+                                        <TABLE-CAPTION>
+                                            <LONG-NAME>
+                                                <L-4 L="for-all">ID ${{DID}}: Write AVSID  </L-4>
+                                            </LONG-NAME>
+                                            <SHORT-NAME>DcmDspUds_DID_{{DID}}h_Write</SHORT-NAME>
+                                        </TABLE-CAPTION>
+                                        <TGROUP COLS="6">
+                                            <COLSPEC COLWIDTH="0.25*" COLNAME="col1" COLNUM="1"/>
+                                            <COLSPEC COLWIDTH="1.14*" COLNAME="col2" COLNUM="2"/>
+                                            <COLSPEC COLWIDTH="0.74*" COLNAME="col3" COLNUM="3"/><COLSPEC COLWIDTH="0.56*" COLNUM="4" COLNAME="col1200943271"/><COLSPEC COLWIDTH="0.59*" COLNUM="5" COLNAME="col825124390"/><COLSPEC COLWIDTH="0.23*" COLNUM="6" COLNAME="col1098608754"/>
+                                            <THEAD>
+                                                <ROW>
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Position</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Explanation</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Storage Location</L-1>
+                                                        </P>
+                                                    </ENTRY>
+<ENTRY COLNAME="col1200943271"><P>
+                                                            <L-1 L="for-all">Hex range</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col825124390"><P>
+                                                            <L-1 L="for-all">Physical range</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col1098608754"><P>
+                                                            <L-1 L="for-all">Unit</L-1>
+                                                        </P></ENTRY>
+                                                </ROW>
+                                            </THEAD>
+                                            <TBODY>
+                                                <ROW>
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">@POS</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">Set the value of AVSID for the Diagnostic-Tester</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
+                                                        <P>
+                                                            <L-1 L="for-all">AVSID (AVS interface)</L-1>
+                                                        </P>
+                                                    </ENTRY>
+<ENTRY COLNAME="col1200943271"><P>
+                                                            <L-1 L="for-all">HEXRANGE</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col825124390"><P>
+                                                            <L-1 L="for-all">PHYSRANGE</L-1>
+                                                        </P></ENTRY>
+<ENTRY COLNAME="col1098608754"><P>
+                                                            <L-1 L="for-all">@UNIT</L-1>
+                                                        </P></ENTRY>
+                                                </ROW>
+                                            </TBODY>
+                                        </TGROUP>
+                                    </TABLE>
+                                </CHAPTER>
