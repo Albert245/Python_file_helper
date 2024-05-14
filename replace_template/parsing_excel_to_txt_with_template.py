@@ -1,3 +1,9 @@
+# PNM3HC10/05/2024 : Parse data from excel file to txt base on template
+#   How it work ? 
+#   Each key word map with one column in excel file
+#   Each row in excel file will create a new paragraph exactly same with the template then replace the keywords with data in excel file.
+#   Afterward it will output all paragraphs in one output.txt file
+
 import openpyxl
 import re
 from openpyxl.utils import get_column_letter, column_index_from_string
@@ -50,38 +56,17 @@ while True:
         break
     line_values = line.split()
     lines.append(line_values)
-
+print(len(lines))
+print('\n')
 for row in range (start_row,row_max):
     temp = "\n" + template
-    for i in range(len(line)):
-        col = line[i][1]
+    for i in range(len(lines)):
+        col = lines[i][1]
         # logic here
         temp_val = str(sheet[col][row].value)
-        line[i].append(temp_val)
-        temp = temp.replace(line[i][0], line[i][2])
+        temp = temp.replace(lines[i][0], temp_val)
 
     output_text = output_text + temp
-
-
-    # DID = str(sheet['A'][row].value)
-    # AVSID = str(sheet['L'][row].value)
-    # POS = str(sheet['C'][row].value)
-    # content = str(sheet['B'][row].value)
-    # if POS != '1':
-    #     POS = '1...' + POS
-    # HEXRANGE = '0x' + str(sheet['F'][row].value) + ' ~ 0x' +str(sheet['G'][row].value)
-    # PHYSRANGE = str(sheet['H'][row].value) + ' ~ ' + str(sheet['I'][row].value)
-    # UNIT = str(sheet['J'][row].value)
-
-    # temp = template.replace('{{DID}}', str(DID))
-    # temp = temp.replace('AVSID', str(AVSID))
-    # temp = temp.replace('@POS', str(POS))
-    # temp = temp.replace('@UNIT', str(UNIT))
-    # temp = temp.replace('HEXRANGE', str(HEXRANGE))
-    # temp = temp.replace('PHYSRANGE', str(PHYSRANGE))
-    # temp = temp.replace('{{content}}', str(content))
-    # output_text = output_text + "\n" + temp
-
 
 
 # Write the modified content to a new text file
