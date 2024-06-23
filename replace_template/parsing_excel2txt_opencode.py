@@ -38,18 +38,21 @@ for row in range (1,row_max):
     content = str(sheet['B'][row].value)
     if POS != '1':
         POS = '1...' + POS
-    HEXRANGE = '0x' + str(sheet['F'][row].value) + ' ~ 0x' +str(sheet['G'][row].value)
     PHYSRANGE = str(sheet['H'][row].value) + ' ~ ' + str(sheet['I'][row].value)
     UNIT = str(sheet['J'][row].value)
+    FACTOR = str(sheet['E'][row].value)
 
     temp = template.replace('{{DID}}', str(DID))
-    temp = temp.replace('AVSID', str(AVSID))
-    temp = temp.replace('@POS', str(POS))
-    temp = temp.replace('@UNIT', str(UNIT))
-    temp = temp.replace('HEXRANGE', str(HEXRANGE))
-    temp = temp.replace('PHYSRANGE', str(PHYSRANGE))
-    temp = temp.replace('{{content}}', str(content))
-    output_text = output_text + "\n" + temp
+    temp = temp.replace('{{AVSID}}', str(AVSID))
+    temp = temp.replace('{{POS}}', str(POS))
+    temp = temp.replace('{{UNIT}}', str(UNIT))
+    temp = temp.replace('{{FACTOR}}', str(FACTOR))
+    temp = temp.replace('{{PHYS}}', str(PHYSRANGE))
+    temp = temp.replace('{{CONTENT}}', str(content))
+    if row == 1:
+        output_text = temp
+    else:
+        output_text = output_text + "\n" + temp
 
 
 
@@ -57,4 +60,4 @@ for row in range (1,row_max):
 with open('output.txt', 'w') as output_file:
     output_file.write(output_text)
 
-print("File created successfully!")
+print("\nFile created successfully!")

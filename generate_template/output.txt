@@ -1,49 +1,48 @@
                                 <CHAPTER>
                                     <LONG-NAME>
-                                        <L-4 L="for-all">ID 0x{{DID}}: {{CONTENT}}</L-4>
                                     </LONG-NAME>
-                                    <SHORT-NAME>DID_0x{{DID}}</SHORT-NAME>
                                     <TABLE>
                                         <TABLE-CAPTION>
                                             <LONG-NAME>
-                                                <L-4 L="for-all">ID ${{DID}}: Read {{AVSID}}  </L-4>
                                             </LONG-NAME>
-                                            <SHORT-NAME>DcmDspUds_DID_{{DID}}h_Read</SHORT-NAME>
                                         </TABLE-CAPTION>
                                         <TGROUP COLS="6">
-                                            <COLSPEC COLWIDTH="0.23*" COLNAME="col1" COLNUM="1"/>
-                                            <COLSPEC COLWIDTH="0.83*" COLNAME="col2" COLNUM="2"/>
-                                            <COLSPEC COLWIDTH="0.97*" COLNAME="col3" COLNUM="3"/>
-                                            <COLSPEC COLWIDTH="0.61*" COLNUM="4" COLNAME="col654685612"/><COLSPEC COLWIDTH="0.46*" COLNAME="col5" COLNUM="5"/>
-                                            <COLSPEC COLWIDTH="0.16*" COLNAME="col6" COLNUM="6"/>
+                                            <COLSPEC COLNAME="col1" COLNUM="1" COLWIDTH="0.23*"/>
+                                            <COLSPEC COLNAME="col2" COLNUM="2" COLWIDTH="0.83*"/>
+                                            <COLSPEC COLNAME="col3" COLNUM="3" COLWIDTH="0.97*"/>
+                                            <COLSPEC COLNAME="col4" COLNUM="4" COLWIDTH="0.61*"/>
+                                            <COLSPEC COLNAME="col5" COLNUM="5" COLWIDTH="0.46*"/>
+                                            <COLSPEC COLNAME="col6" COLNUM="6" COLWIDTH="0.16*"/>
                                             <THEAD>
                                                 <ROW>
-                                                    <ENTRY COLNAME="col1">
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Position</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col2">
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Explanation</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col3">
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Storage Location</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    
-<ENTRY COLNAME="col654685612"><P>
+                                                    <ENTRY COLNAME="col4" MOREROWS="0">
+                                                        <P>
                                                             <L-1 L="for-all">
                                                                 <E>Conversion</E>
                                                             </L-1>
-                                                        </P></ENTRY><ENTRY COLNAME="col5">
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col5" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Physical range</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col6">
+                                                    <ENTRY COLNAME="col6" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Unit</L-1>
                                                         </P>
@@ -52,32 +51,28 @@
                                             </THEAD>
                                             <TBODY>
                                                 <ROW>
-                                                    <ENTRY COLNAME="col1">
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{POS}}</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col2">
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">Get the value of {{AVSID}} for the Diagnostic-Tester</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col3">
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{AVSID}} (AVS interface)</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    
-<ENTRY COLNAME="col654685612"><P>
-                                                            <L-1 L="FOR-ALL">phys = {{FACTOR}}*int</L-1>
-                                                        </P></ENTRY><ENTRY COLNAME="col5">
+                                                    <ENTRY COLNAME="col4" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{PHYS}}</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col6">
+                                                    <ENTRY COLNAME="col5" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{UNIT}}</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col6" MOREROWS="0">
+                                                        <P>
                                                         </P>
                                                     </ENTRY>
                                                 </ROW>
@@ -87,44 +82,45 @@
                                     <TABLE>
                                         <TABLE-CAPTION>
                                             <LONG-NAME>
-                                                <L-4 L="for-all">ID ${{DID}}: Write {{AVSID}}  </L-4>
                                             </LONG-NAME>
-                                            <SHORT-NAME>DcmDspUds_DID_{{DID}}h_Write</SHORT-NAME>
                                         </TABLE-CAPTION>
                                         <TGROUP COLS="6">
-                                            <COLSPEC COLWIDTH="0.23*" COLNAME="col1" COLNUM="1"/>
-                                            <COLSPEC COLWIDTH="0.83*" COLNAME="col2" COLNUM="2"/>
-                                            <COLSPEC COLWIDTH="0.97*" COLNAME="col3" COLNUM="3"/>
-                                            <COLSPEC COLWIDTH="0.61*" COLNUM="4" COLNAME="col654685612"/><COLSPEC COLWIDTH="0.46*" COLNAME="col5" COLNUM="5"/>
-                                            <COLSPEC COLWIDTH="0.16*" COLNAME="col6" COLNUM="6"/>
+                                            <COLSPEC COLNAME="col1" COLNUM="1" COLWIDTH="0.23*"/>
+                                            <COLSPEC COLNAME="col2" COLNUM="2" COLWIDTH="0.83*"/>
+                                            <COLSPEC COLNAME="col3" COLNUM="3" COLWIDTH="0.97*"/>
+                                            <COLSPEC COLNAME="col4" COLNUM="4" COLWIDTH="0.61*"/>
+                                            <COLSPEC COLNAME="col5" COLNUM="5" COLWIDTH="0.46*"/>
+                                            <COLSPEC COLNAME="col6" COLNUM="6" COLWIDTH="0.16*"/>
                                             <THEAD>
                                                 <ROW>
-                                                    <ENTRY COLNAME="col1">
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Position</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col2">
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Explanation</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col3">
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Storage Location</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    
-<ENTRY COLNAME="col654685612"><P>
+                                                    <ENTRY COLNAME="col4" MOREROWS="0">
+                                                        <P>
                                                             <L-1 L="for-all">
                                                                 <E>Conversion</E>
                                                             </L-1>
-                                                        </P></ENTRY><ENTRY COLNAME="col5">
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col5" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Physical range</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col6">
+                                                    <ENTRY COLNAME="col6" MOREROWS="0">
                                                         <P>
                                                             <L-1 L="for-all">Unit</L-1>
                                                         </P>
@@ -133,38 +129,37 @@
                                             </THEAD>
                                             <TBODY>
                                                 <ROW>
-                                                    <ENTRY COLNAME="col1">
+                                                    <ENTRY COLNAME="col1" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{POS}}</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col2">
+                                                    <ENTRY COLNAME="col2" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">Set the value of {{AVSID}} for the Diagnostic-Tester</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col3">
+                                                    <ENTRY COLNAME="col3" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{AVSID}} (AVS interface)</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    
-<ENTRY COLNAME="col654685612"><P>
-                                                            <L-1 L="FOR-ALL">phys = {{FACTOR}}*int</L-1>
-                                                        </P></ENTRY><ENTRY COLNAME="col5">
+                                                    <ENTRY COLNAME="col4" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{PHYS}}</L-1>
                                                         </P>
                                                     </ENTRY>
-                                                    <ENTRY COLNAME="col6">
+                                                    <ENTRY COLNAME="col5" MOREROWS="0">
                                                         <P>
-                                                            <L-1 L="for-all">{{UNIT}}</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col6" MOREROWS="0">
+                                                        <P>
                                                         </P>
                                                     </ENTRY>
                                                 </ROW>
                                             </TBODY>
                                         </TGROUP>
-                                    </TABLE><NOTE NOTE-TYPE="HINT"><P>
-                                                            <L-1 L="for-all">Initial value is not handling by ComDia but handles by each corresponding FC.</L-1>
-                                                        </P></NOTE>
+                                    </TABLE>
+                                    <NOTE>
+                                        <P>
+                                            <L-1 L="for-all">Initial value is not handling by ComDia but handles by each corresponding FC.</L-1>
+                                        </P>
+                                    </NOTE>
                                 </CHAPTER>
