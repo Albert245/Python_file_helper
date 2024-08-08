@@ -1,0 +1,30 @@
+                                                    <ENTRY COLNAME="col1">
+                                                        <P>
+                                                            <L-1 L="for-all">0x2405</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col2">
+                                                        <P>
+                                                            <L-1 L="for-all">Set the value of 1234 for the Diagnostic-Tester</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col3">
+                                                        <P>
+                                                            <L-1 L="for-all">2 (AVS interface)</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col1">
+                                                        <P>
+                                                            <L-1 L="for-all">0xf181</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col2">
+                                                        <P>
+                                                            <L-1 L="for-all">Set the value of 4444 for the Diagnostic-Tester</L-1>
+                                                        </P>
+                                                    </ENTRY>
+                                                    <ENTRY COLNAME="col3">
+                                                        <P>
+                                                            <L-1 L="for-all">2 (AVS interface)</L-1>
+                                                        </P>
+                                                    </ENTRY>

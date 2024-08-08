@@ -12,6 +12,7 @@ c_files = [file for file in os.listdir(current_dir) if file.endswith('.c')]
 for c_file in c_files:
     # Run Pylint with the MISRA 2012 ruleset
     result = subprocess.run(['pylint', '--disable=all', '--enable=pylint.extensions.misrac2012', c_file], capture_output=True, text=True)
+    print(result)
 
     # Write the output to a file
     output_file = os.path.splitext(c_file)[0] + '_misra_output.txt'
